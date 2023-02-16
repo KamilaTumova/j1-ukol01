@@ -8,10 +8,14 @@ public class HlavniProgram {
     public void start() {
         Turtle zofka = new Turtle();
 
-        nakresliPrasatko(zofka);
-
+        //nakresliPrasatko(zofka);
+        // nakreslidomecek(zofka);
     }
 
+    private static void nakreslidomecek(Turtle zofka) {
+        nakresliStrizku(zofka);
+        nakresliCtverec(zofka);
+    }
 
 
     private static void nakresliPrasatko(Turtle zofka) {
