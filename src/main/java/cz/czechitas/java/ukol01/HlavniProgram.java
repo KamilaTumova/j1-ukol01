@@ -63,18 +63,43 @@ public class HlavniProgram {
 
        nakresliK(zofka);
        nakresliA(zofka);
+
+        double a = 100;
+        double b = 30;
+        double ang = 40;
+        zofka.penDown();
+        zofka.move(a);
+        zofka.turnRight(90+ang);
+        zofka.move(b);
+        zofka.turnLeft(90);
+        zofka.move(b);
+        //zofka.turnRight(90+ang);
+       // zofka.move(a);
     }
 
     private static void nakresliA(Turtle zofka) {
         double ang = 10;
         double radians = Math.toRadians(ang);
         double a = 100;
-        double b = (int)(a)/(Math.cos(radians));
+        double b = (a)/(Math.cos(radians));
+        double c = 2*((b/2)*(Math.sin(radians)));
         zofka.penDown();
         zofka.turnRight(ang);
         zofka.move(b);
         zofka.turnRight(180-2*ang);
         zofka.move(b);
+        zofka.turnRight(180);
+        zofka.move(b/3);
+        zofka.turnLeft(90-ang);
+        zofka.move(c);
+        zofka.penUp();
+        zofka.turnRight(180);
+        zofka.move(c);
+        zofka.turnRight(90-ang);
+        zofka.move(b/3);
+        zofka.turnLeft(90-ang);
+        zofka.move(20);
+        zofka.turnLeft(90);
     }
 
     private static void nakresliK(Turtle zofka) {
