@@ -7,7 +7,7 @@ public class HlavniProgram {
 
     public void start() {
         Turtle zofka = new Turtle();
-       /* zofka.penUp();
+        zofka.penUp();
         zofka.turnLeft(45);
         zofka.move(300);
         zofka.turnLeft(45);
@@ -59,11 +59,43 @@ public class HlavniProgram {
         zofka.move(250);
         zofka.turnLeft(90);
         zofka.move(120);
-        zofka.turnRight(180);*/
+        zofka.turnRight(180);
 
        nakresliK(zofka);
        nakresliA(zofka);
+       nakresliM(zofka);
+       nakresliI(zofka);
+       nakresliL(zofka);
+       nakresliA(zofka);
 
+    }
+
+    private static void nakresliL(Turtle zofka) {
+        double a = 100;
+        zofka.penDown();
+        zofka.move(a);
+        zofka.turnRight(180);
+        zofka.move(a);
+        zofka.turnLeft(90);
+        zofka.move(20);
+        zofka.penUp();
+        zofka.move(20);
+        zofka.turnLeft(90);
+    }
+
+    private static void nakresliI(Turtle zofka) {
+        double a = 100;
+        zofka.penDown();
+        zofka.move(a);
+        zofka.turnRight(180);
+        zofka.move(a);
+        zofka.turnLeft(90);
+        zofka.penUp();
+        zofka.move(20);
+        zofka.turnLeft(90);
+    }
+
+    private static void nakresliM(Turtle zofka) {
         double a = 100;
         double b = 30;
         double ang = 40;
@@ -71,10 +103,14 @@ public class HlavniProgram {
         zofka.move(a);
         zofka.turnRight(90+ang);
         zofka.move(b);
-        zofka.turnLeft(90);
+        zofka.turnLeft(2*ang);
         zofka.move(b);
-        //zofka.turnRight(90+ang);
-       // zofka.move(a);
+        zofka.turnRight(90+ang);
+        zofka.move(a);
+        zofka.penUp();
+        zofka.turnLeft(90);
+        zofka.move(20);
+        zofka.turnLeft(90);
     }
 
     private static void nakresliA(Turtle zofka) {
